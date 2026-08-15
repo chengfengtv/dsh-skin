@@ -63,10 +63,11 @@ In **Settings → General → 背景图片 / Wallpaper**:
   behind the UI.
 - **移除图片 / Remove** clears it.
 
-Slider updates are coalesced to one paint per animation frame. The plugin also
-keeps the already-decoded wallpaper in place and avoids rebuilding theme-token
-overrides for blur-only changes, so opacity and blur controls remain responsive
-even with a full-screen wallpaper.
+Blur updates are coalesced to one paint per animation frame. Opacity uses a
+dedicated lightweight CSS token layer instead of publishing a global Harness
+theme change for every slider step. The plugin also keeps the already-decoded
+wallpaper in place, so both controls remain responsive even with a full-screen
+wallpaper.
 
 The wallpaper lives on a `z-index: -1` fixed layer, so it is only visible
 through the translucent main canvas and sidebar; message surfaces keep their
