@@ -63,6 +63,11 @@ In **Settings → General → 背景图片 / Wallpaper**:
   behind the UI.
 - **移除图片 / Remove** clears it.
 
+Slider updates are coalesced to one paint per animation frame. The plugin also
+keeps the already-decoded wallpaper in place and avoids rebuilding theme-token
+overrides for blur-only changes, so opacity and blur controls remain responsive
+even with a full-screen wallpaper.
+
 The wallpaper lives on a `z-index: -1` fixed layer, so it is only visible
 through the translucent main canvas and sidebar; message surfaces keep their
 solid backgrounds for readability. It also follows your active skin's tint
@@ -84,6 +89,12 @@ From anywhere, add the package to the `web` profile:
 
 ```sh
 dsh plugin --profile web add -w /path/to/dsh-skin
+```
+
+Or install this optimized fork directly from GitHub:
+
+```sh
+dsh plugin --profile web add -w github:chengfengtv/dsh-skin
 ```
 
 > The `-w` flag is required: every profile ships a `pnpm-workspace.yaml`, so

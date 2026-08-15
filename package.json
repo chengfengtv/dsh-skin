@@ -1,12 +1,16 @@
 {
   "name": "dsh-skin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Skin switcher + custom wallpaper for DeepSeek Harness: curated --dsw-alias-* palettes, translucent wallpaper with opacity/blur controls, and durable per-user persistence (like Codex themes)",
   "license": "MIT",
   "author": "KinGao294",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KinGao294/dsh-skin.git"
+    "url": "git+https://github.com/chengfengtv/dsh-skin.git"
+  },
+  "homepage": "https://github.com/chengfengtv/dsh-skin#readme",
+  "bugs": {
+    "url": "https://github.com/chengfengtv/dsh-skin/issues"
   },
   "keywords": [
     "deepseek-harness",
@@ -32,6 +36,7 @@
     "./package.json": "./package.json"
   },
   "files": [
+    "CHANGELOG.md",
     "lib/index.js",
     "lib/client.js",
     "lib/types",
